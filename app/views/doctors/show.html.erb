@@ -1,0 +1,7 @@
+<h2><%= @doctor.name%>'s Appointments</h2> 
+
+<% @doctor.appointments.each do |apt| %>
+<p>
+  <%= apt.readable_time %> <h3>|</h3> <%= link_to apt.patient.name, patient_path(apt.patient)%>
+</p>
+<% end %>
